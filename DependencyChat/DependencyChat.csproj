@@ -8,6 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="DependencyInjection\TextFile1.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="TextFile1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DependencyChat.Server\DependencyChat.Server.csproj" />
   </ItemGroup>
 

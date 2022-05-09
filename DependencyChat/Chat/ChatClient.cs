@@ -1,6 +1,6 @@
 ﻿using DependencyChat.Server;
 
-namespace DependencyChat
+namespace DependencyChat.Chat
 {
     internal class ChatClient : IMessageReceiver
     {

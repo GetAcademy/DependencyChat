@@ -1,10 +1,9 @@
-﻿using DependencyChat;
-using DependencyChat.Server;
+﻿using DependencyChat.Chat;
+using DependencyChat.DependencyInjection;
 
-var server = new ChatServer();
-
-var client1 = new ChatClient(server, "Anders");
-var client2 = new ChatClient(server, "Bertil");
-var client3 = new ChatClient(server, "Cecilie");
-
-client2.SendMessage("Hei");
+// ChatDemo.Run();
+//var fetcher = new FileTextFetcher();
+//var fetcher = new WebTextFetcher();
+var fetcher = new ConsoleTextFetcher();
+var counter = new LetterCountingService(fetcher);
+Console.WriteLine(counter.Count('a'));
